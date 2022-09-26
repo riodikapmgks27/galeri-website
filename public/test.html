@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bambang</h1>
+    <br>
+    <textarea name="ulas" id="ulasan" cols="30" rows="10" placeholder="Beri ulasan"></textarea><br>
+    <button onclick="ulas()">sumbit</button>
+    <p id="demo"></p>
+    <br>
+
+<script>
+  const ulasan = document.getElementById("ulasan");
+  const demo = document.getElementById("demo");
+
+  fetch("/ulasan") 
+      .then(res => res.json())
+      .then(data => {
+        let txt = ''
+        for (let i = 0; i < data.length; i++){
+          txt += data[i].isi + "<br>" + '\n';
+        }
+        demo.innerHTML = txt;
+        console.log(txt)
+      })
+
+  function ulas() {
+
+    const arr = {isi: ulasan.value}
+    const obj = JSON.stringify(arr)
+    const options = {
+        method: "post",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(arr)
+      }
+
+    fetch("/ulasan", options) 
+      .then(res => res.json())
+      .then(data => {
+        let txt = ''
+        for (let i = 0; i < data.length; i++){
+          txt += data[i].isi + "<br>" + '\n';
+        }
+        demo.innerHTML = txt;
+        console.log(txt)
+      })
+      // .then(x => console.log(x))
+    // console.log("Yahya")
+    // console.log(ulasan.value)
+  }
+    
+</script>
+</body>
+</html>
