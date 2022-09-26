@@ -1,0 +1,8 @@
+.banner {
+	background: url("img/banner\ gema\ pelangi.jpg")
+	  no-repeat center center;
+	background-size: cover;
+	padding-top: 50%;
+	padding-bottom: 40%;
+	color: #fff;
+}
