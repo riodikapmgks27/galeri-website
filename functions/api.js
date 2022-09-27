@@ -23,10 +23,10 @@ app.use(cors({
 
 router.get('/', (req,res) => {
   const json = {
-    "name": "bambang"
+    name: "bambang"
   }
-
-  res.send(json)
+  const obj = JSON.stringify(json)
+  res.send(obj)
   // res.end(json)
   
 })
