@@ -25,7 +25,9 @@ router.get('/', (req,res) => {
   const json = {
     "name": "bambang"
   }
-  res.send(json)
+
+  // res.send(json)
+  res.end(json)
   
 })
 
