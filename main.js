@@ -3,11 +3,13 @@ const ulasan = document.getElementById("ulasan");
 const isiNama = document.getElementById("isiNama");
 const isiUlasan = document.getElementById("isiUlasan");
 const nama = document.getElementById("nama");
-const url = "https://bespoke-douhua-40ca24.netlify.app"
+// const url = "https://bespoke-douhua-40ca24.netlify.app"
 
   // * TAMPILKAN DATA SAAT LOAD --
   // * -----------------------------------------------------
-  fetch('https://heroic-speculoos-a970db.netlify.app/') 
+  fetch('https://heroic-speculoos-a970db.netlify.app/', {
+    mode: "no-cors"
+  }) 
       .then(res => res.text() )
       .then(data => {
           console.log(data)
@@ -21,7 +23,7 @@ const url = "https://bespoke-douhua-40ca24.netlify.app"
 
         // }
         // isiUlasan.innerHTML = isi;
-      })
+      }) .catch(e => console.log(e))
   // * -----------------------------------------------------
 
   // * KIRIM DATA --
@@ -40,7 +42,7 @@ const url = "https://bespoke-douhua-40ca24.netlify.app"
     
     // * TAMPILKAN DATA SAAT TOMBOL DITEKAN --
     // * -----------------------------------------------------
-    fetch(url + "/ulasan", options) 
+    fetch('https://heroic-speculoos-a970db.netlify.app/', options) 
     .then(res => res.json())
       .then(data => {
         let isi = ''
