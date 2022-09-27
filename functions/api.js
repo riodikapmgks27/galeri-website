@@ -16,7 +16,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(express.static("public"));
 app.use(cors({
-  origin:"*"
+  origin:"https://bespoke-douhua-40ca24.netlify.app/"
 }))
 // * -------------------------------------------------------------------------------
 
