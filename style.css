@@ -6,3 +6,16 @@
 	padding-bottom: 40%;
 	color: #fff;
 }
+
+footer {
+	height: 200px;
+	background-color: black;
+	margin-top: 2rem;
+}
+
+.wa {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	z-index: 5;
+}
