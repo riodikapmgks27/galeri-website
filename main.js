@@ -7,20 +7,20 @@ const url = "https://bespoke-douhua-40ca24.netlify.app"
 
   // * TAMPILKAN DATA SAAT LOAD --
   // * -----------------------------------------------------
-  fetch(url + "/") 
+  fetch('https://bespoke-douhua-40ca24.netlify.app') 
       .then(res => res.json())
       .then(data => {
-        let isi = ''
-        for (let i = 0; i < data.length; i++){
-
-          isi +=  `
-          <h5>${data[i].name}<br> </h5>
-          <p">"${data[i].isi}"<br><br> <hr> </p>
-          `;
-
           console.log(data)
-        }
-        isiUlasan.innerHTML = isi;
+        // let isi = ''
+        // for (let i = 0; i < data.length; i++){
+
+        //   isi +=  `
+        //   <h5>${data[i].name}<br> </h5>
+        //   <p">"${data[i].isi}"<br><br> <hr> </p>
+        //   `;
+
+        // }
+        // isiUlasan.innerHTML = isi;
       })
   // * -----------------------------------------------------
 
