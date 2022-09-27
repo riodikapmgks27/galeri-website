@@ -27,7 +27,7 @@ router.get('/', (req,res) => {
   }
   const obj = JSON.stringify(json)
   res.send(obj)
-  // res.end(json)
+  res.end()
   
 })
 
