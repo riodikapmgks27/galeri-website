@@ -3,20 +3,22 @@ const ulasan = document.getElementById("ulasan");
 const isiNama = document.getElementById("isiNama");
 const isiUlasan = document.getElementById("isiUlasan");
 const nama = document.getElementById("nama");
+const url = "https://bespoke-douhua-40ca24.netlify.app"
 
   // * TAMPILKAN DATA SAAT LOAD --
   // * -----------------------------------------------------
-  fetch("/ulasan") 
+  fetch(url + "/") 
       .then(res => res.json())
       .then(data => {
         let isi = ''
         for (let i = 0; i < data.length; i++){
 
           isi +=  `
-          <h5>${data[i].nama}<br> </h5>
+          <h5>${data[i].name}<br> </h5>
           <p">"${data[i].isi}"<br><br> <hr> </p>
           `;
 
+          console.log(data)
         }
         isiUlasan.innerHTML = isi;
       })
@@ -38,7 +40,7 @@ const nama = document.getElementById("nama");
     
     // * TAMPILKAN DATA SAAT TOMBOL DITEKAN --
     // * -----------------------------------------------------
-    fetch("/ulasan", options) 
+    fetch(url + "/ulasan", options) 
     .then(res => res.json())
       .then(data => {
         let isi = ''
