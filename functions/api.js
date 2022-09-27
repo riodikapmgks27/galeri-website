@@ -22,6 +22,9 @@ app.use(cors({
 
 
 router.get('/', (req,res) => {
+  const json = {
+    "name": "bambang"
+  }
   res.send('Helloooo')
 })
 
