@@ -7,55 +7,54 @@ const nama = document.getElementById("nama");
 
   // * TAMPILKAN DATA SAAT LOAD --
   // * -----------------------------------------------------
-  fetch('https://heroic-speculoos-a970db.netlify.app/', {
-    mode: "no-cors"
-  }) 
-      .then(res => res.text() )
-      .then(data => {
-          console.log(data)
-        // let isi = ''
-        // for (let i = 0; i < data.length; i++){
+  // fetch('https://heroic-speculoos-a970db.netlify.app/') 
+  //     .then(res => res.text() )
+  //     .then(data => {
+  //         console.log(data)
+  //       // let isi = ''
+  //       // for (let i = 0; i < data.length; i++){
 
-        //   isi +=  `
-        //   <h5>${data[i].name}<br> </h5>
-        //   <p">"${data[i].isi}"<br><br> <hr> </p>
-        //   `;
+  //       //   isi +=  `
+  //       //   <h5>${data[i].name}<br> </h5>
+  //       //   <p">"${data[i].isi}"<br><br> <hr> </p>
+  //       //   `;
 
-        // }
-        // isiUlasan.innerHTML = isi;
-      }) .catch(e => console.log(e))
+  //       // }
+  //       // isiUlasan.innerHTML = isi;
+  //     }) .catch(e => console.log(e))
   // * -----------------------------------------------------
 
   // * KIRIM DATA --
   // * -----------------------------------------------------
-  function ulas() {
+  // function ulas() {
     
-    const isi = {nama: nama.value, isi: ulasan.value}
-    // const obj = JSON.stringify(isi)
-    const options = {
-      method: "post",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(isi)
-    }
+  //   const isi = {nama: nama.value, isi: ulasan.value}
+  //   // const obj = JSON.stringify(isi)
+  //   const options = {
+  //     method: "post",
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(isi)
+  //   }
     
-    // * TAMPILKAN DATA SAAT TOMBOL DITEKAN --
+  //   // * TAMPILKAN DATA SAAT TOMBOL DITEKAN --
+  //   // * -----------------------------------------------------
+  //   fetch('https://heroic-speculoos-a970db.netlify.app/', options) 
+  //   .then(res => res.json())
+  //     .then(data => {
+  //       let isi = ''
+  //       for (let i = 0; i < data.length; i++){
+  //         isi +=  `
+  //         <h5>${data[i].nama}<br> </h5>
+  //         <p>"${data[i].isi}"<br><br> <hr> </p>
+  //         `;
+  //       }
+  //       isiUlasan.innerHTML = isi;
+  //     })
+  //     // .then(x => console.log(x))
+  //     // console.log("Yahya")
+  //     // console.log(ulasan.value)
+  //   }
     // * -----------------------------------------------------
-    fetch('https://heroic-speculoos-a970db.netlify.app/', options) 
-    .then(res => res.json())
-      .then(data => {
-        let isi = ''
-        for (let i = 0; i < data.length; i++){
-          isi +=  `
-          <h5>${data[i].nama}<br> </h5>
-          <p>"${data[i].isi}"<br><br> <hr> </p>
-          `;
-        }
-        isiUlasan.innerHTML = isi;
-      })
-      // .then(x => console.log(x))
-      // console.log("Yahya")
-      // console.log(ulasan.value)
-    }
-    // * -----------------------------------------------------
+  
