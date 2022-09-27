@@ -3,15 +3,21 @@ const express = require("express");
 const bodyparser = require("body-parser");
 const fs = require("fs");
 const serverless = require('serverless-http')
+const cors = require('cors')
+
 
 // * SETTING
 const app = express();
 const router = express.Router();
 
+
 // * PARSER
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(express.static("public"));
+app.use(cors({
+  origin:"http://127.0.0.1:5500/index.html"
+}))
 // * -------------------------------------------------------------------------------
 
 
