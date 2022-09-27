@@ -8,7 +8,7 @@ const url = "https://bespoke-douhua-40ca24.netlify.app"
   // * TAMPILKAN DATA SAAT LOAD --
   // * -----------------------------------------------------
   fetch('https://bespoke-douhua-40ca24.netlify.app') 
-      .then(res => {res.json(); console.log(res)})
+      .then(res => {res.json(); console.log(res.json)})
       .then(data => {
           // console.log(data)
         // let isi = ''
