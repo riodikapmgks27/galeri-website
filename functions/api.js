@@ -2,10 +2,11 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const fs = require("fs");
-const app = express();
+const serverless = require('serverless-http')
 
 // * SETTING
-const port = 3000;
+const app = express();
+const router = express.Router();
 
 // * PARSER
 app.use(bodyparser.urlencoded({ extended: true }));
@@ -14,14 +15,16 @@ app.use(express.static("public"));
 // * -------------------------------------------------------------------------------
 
 
-
+router.get('/', (req,res) => {
+  res.send('Helloooo')
+})
 
 
 
 
 // * BACA & TULIS DATA
 // * -------------------------------------------------------------------------------
-app.post("/ulasan", (req, res) => {
+router.post("/ulasan", (req, res) => {
   const ulasan = req.body;
   fs.readFile("ulasan.json", "utf-8", (err, data) => {
     const json = JSON.parse(data);
@@ -44,7 +47,7 @@ app.post("/ulasan", (req, res) => {
 
 // * PENGAMBILAN DATA SAAT LOAD
 // * -------------------------------------------------------------------------------
-app.get("/ulasan", (req, res) => {
+router.get("/ulasan", (req, res) => {
   fs.readFile("ulasan.json", "utf-8", (err, data) => {
     const json = JSON.parse(data);
 
@@ -53,9 +56,12 @@ app.get("/ulasan", (req, res) => {
 });
 // * -------------------------------------------------------------------------------
 
+app.use('/', router)
+
+// // * PENGATURAN PORT
+// // * -------------------------------------------------------------------------------
+// app.listen(port, () => console.log(`Listening on port ${port}!`)); //*||
+// // * -------------------------------------------------------------------------------
 
 
-// * PENGATURAN PORT
-// * -------------------------------------------------------------------------------
-app.listen(port, () => console.log(`Listening on port ${port}!`)); //*||
-// * -------------------------------------------------------------------------------
+module.exports.handler = serverless(app);
