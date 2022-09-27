@@ -17,13 +17,16 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"  />
 
-     <link rel="stylesheet" href="style.css"/> -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+     <link rel="stylesheet" href="style.css"/> 
 
   </head>
 
   <body>
+    <div class="wa"><a href="https://wa.link/lomjkg"><img src="./img/wa.png" alt="Logo wa" width="70vw"></a></div>
     <!-- Navigasi-->
-    <nav
+    <!-- <nav
       class="navbar navbar-expand-lg navbar-dark bg-dark shadow-lg fixed-top"
     >
       <div class="container">
@@ -57,7 +60,10 @@
           </ul>
         </div>
       </div>
-    </nav>
+    </nav> -->
+
+    
+
     <!-- banner -->
     <div class="container-fluid banner">
       <div class="container text-center"></div>
@@ -259,12 +265,45 @@
          Kritik Dan Saran dari kalian bermanfaat untuk toko kami TERIMA KASIH...
         </p>
         <div class="mx-auto mt-4 text-center">
-          <button type="button" class="btn btn-danger">Kirim Pesan</button>
+          <!-- <button type="button" class="btn btn-danger">Kirim Pesan</button> -->
         </div>
       </div>
     </div>
 
+    <div class="container d-flex flex-column justify-content-center align-content-center">
+      <h2>Tulis ulasan</h2>
+      <input type="text" name="nama" id="nama" class="w-25" placeholder="Nama..."><br>
+      <textarea name="ulas" id="ulasan" cols="20" rows="5" placeholder="Isi ulasan..." required></textarea><br>
+      <button onclick="ulas()" class="btn btn-danger w-25">Kirim Ulasan</button>
+      <hr>
+      <h2>Ulasan:</h2><hr>
+      <div class="conatiner ms-4 mt-3">
+        <div id="isiNama" class="text-start"></div>
+        <div id="isiUlasan"></div>
+      </div>
+    </div>
 
+    <footer>
+      <!-- NEW NAV -->
+
+    <div class="offcanvas offcanvas-start" id="demo">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Heading</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p>Some text lorem ipsum.</p>
+        <p>Some text lorem ipsum.</p>
+        <p>Some text lorem ipsum.</p>
+        <button class="btn btn-secondary" type="button">A Button</button>
+      </div>
+    </div>
+    
+      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        Open Offcanvas Sidebar
+      </button>
+    </footer>
     <!-- test -->
+    <script src="./main.js"></script>
   </body>
 </html>
