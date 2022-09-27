@@ -22,7 +22,7 @@ app.use(cors({
 
 
 router.get('/', (req,res) => {
-  res.sendFile('Helloooo')
+  res.send('Helloooo')
 })
 
 
