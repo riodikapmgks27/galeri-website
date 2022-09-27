@@ -5,6 +5,7 @@ const fs = require("fs");
 const serverless = require('serverless-http')
 const cors = require('cors')
 
+app.use(cors())
 
 // * SETTING
 const app = express();
@@ -15,9 +16,6 @@ const router = express.Router();
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(express.static("public"));
-app.use(cors({
-  origin:"https://bespoke-douhua-40ca24.netlify.app/"
-}))
 // * -------------------------------------------------------------------------------
 
 
