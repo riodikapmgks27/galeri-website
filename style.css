@@ -19,6 +19,12 @@ footer {
 	bottom: 20px;
 	z-index: 5;
 }
+.ig {
+	position: fixed;
+	left: 20px;
+	bottom: 20px;
+	z-index: 5;
+}
 
 .men {
 	font-size: 20px;
