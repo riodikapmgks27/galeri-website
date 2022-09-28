@@ -8,7 +8,7 @@
 }
 
 footer {
-	height: 200px;
+	height: 70px;
 	background-color: black;
 	margin-top: 2rem;
 }
@@ -19,3 +19,12 @@ footer {
 	bottom: 20px;
 	z-index: 5;
 }
+
+.men {
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+
+/* .leftit {
+	transform: translate(800px, 10px);
+} */
