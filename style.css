@@ -26,6 +26,39 @@ footer {
 	z-index: 5;
 }
 
+
+
+.le-btn {
+	position: absolute;
+	left: 43vw;
+	top: 20px;
+	/* transition-delay: 400ms; */
+}
+
+/* .show-it {
+	transform: translate(100%, 0);
+} */
+
+.nav-con {
+	position: fixed;
+	z-index: 999;
+	background-color: #fff;
+	width: 50vw;
+	height: 100vh;
+	left: -55%;
+	transition: .4s;
+	/* transform: translate(-100%, 0); */
+
+}
+
+
+/* @media screen and (min-width: 600px) {
+	.nav-con {
+		width: 35vw;
+	}
+} */
+
+
 /* .men {
 	font-size: 20px;
 	margin-bottom: 10px;
